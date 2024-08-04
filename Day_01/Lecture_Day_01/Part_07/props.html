@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="gojo"></div>
+  </body>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    let message = () => {
+      alert("Ki Hola");
+    };
+
+    let props = { className: "hello_class", id: "hello_ID", onClick: message };
+
+    let element = (
+      <button className={props.className} onClick={props.onClick}>
+        Submit
+      </button>
+    );
+
+    let abc = ReactDOM.createRoot(document.getElementById("gojo"));
+    abc.render(element);
+  </script>
+</html>
+
+<!-- esmai muje shir ek property chaiye like className so className={props.className} lik do ho jayeaga aur nahi to agar sab chaiye to {...props} aise lik do -->

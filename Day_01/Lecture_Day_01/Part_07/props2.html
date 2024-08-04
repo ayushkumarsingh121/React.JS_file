@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="gojo"></div>
+  </body>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    let message = () => {
+      alert("bol na bhai");
+    };
+
+    let props = { className: "hello_class", id: "hello_ID", onClick: message };
+
+    let element = (
+      <button {...props}>
+        Submit
+      </button>
+    );
+
+    let abc = ReactDOM.createRoot(document.getElementById("gojo"));
+    abc.render(element);
+  </script>
+</html>
+
+<!-- es trah se button ka sara property use kr sakte hai and uska attribute bhi laga kr use kr skte hai like id and class name  -->
+
+<!-- agar {...props} es trah se use krte hai to we can use all properties of and element and more -->
+
+<!-- first button tag bana kr render kr diya 
+abb usko click krne pr ek message ana chaiye to uske liye message component bana diya 
+and abb button ka id and class bhi chaiye to props name se cheej bana diya 
+now i have a button which has id and class and when we click on button it shows alert message -->

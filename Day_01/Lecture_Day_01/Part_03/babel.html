@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="bloodGroup"></div>
+  </body>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+  <script>
+    // first link is to know that we are using react for development
+    // second link is help the reat for virutal DOM becasuse React doesnt have real DOM it has VDOM
+    // what if i remove babel ?
+
+    // output => <p class="mine">My blood Group is O+</p>
+
+    let pTag = React.createElement("p", {
+      className: "name",
+      children: "My blood Group is O+",
+    });
+// this is how react create element internally if you dont use babel you have to create element in react and because of this you have to right a code more bhai esse achha to js se hi kr le agar babel use nahi kiya to
+    let abc = ReactDOM.createRoot(document.getElementById("bloodGroup"));
+    abc.render(pTag);
+  </script>
+</html>

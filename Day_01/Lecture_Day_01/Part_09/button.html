@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    let Element = () => {
+      
+      let handel = ()=>{
+        alert("jay shree ram")
+      }
+
+      return (
+        <div>
+          <h1>Hello world</h1>
+          <div>
+            <p>this is para</p>
+            <button onClick={handel}>Submit</button>
+          </div>
+        </div>
+      );
+    };
+
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Element/>)
+  </script>
+</html>
+
+
+<!-- React mai kisi bhi function ko call krna hai to aise karo like this =>   <Element/> -->
+
+<!-- JavaScript mai kisi bhi function ko call krna hai to aise karo like this =>   (Element()) -->
+
+<!-- React ka function always return HTML code 
+Ek function jo HTML return kare =>  React Component -->

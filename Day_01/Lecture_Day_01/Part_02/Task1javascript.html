@@ -1,0 +1,37 @@
+<!-- Question  1  Imperative Programming Exercise: Using plain JavaScript, manipulate the DOM to create a list (ul) element containing three items (li) with the names of your favorite movies. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="movie-list-container"></div>
+  </body>
+  <script>
+    let main_ul_element = document.createElement("ul");
+    let main_li_element = document.createElement("b");
+    main_li_element.innerHTML = "Favorite Movie";
+
+    let ulElement = document.createElement("ol");
+
+    let favoriteMovies = [
+      "Fury Road",
+      "Die Hard",
+      "The Dark Knight",,
+    ];
+
+    favoriteMovies.forEach((movie) => {
+      let liElement = document.createElement("li");
+      liElement.textContent = movie;
+      ulElement.appendChild(liElement);
+    });
+    main_ul_element.append(main_li_element, ulElement);
+
+    document
+      .getElementById("movie-list-container")
+      .appendChild(main_ul_element);
+  </script>
+</html>
